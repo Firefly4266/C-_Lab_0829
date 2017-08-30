@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InputWrapper.cs" />
     <Compile Include="IPolicy.cs" />
     <Compile Include="Policy.cs" />
     <Compile Include="PolicyDefinitions.cs" />

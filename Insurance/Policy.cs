@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Insurance
+abstract public class Policy
 {
-    public class Policy
+    private ArrayList accounts;
+    private int id;
+    private decimal propertyLimit;
+    private decimal liabilityLimit;
+    protected string status;
+    protected DateTime start
+    public Policy(int id, decimal propertyLimit, decimal liabilityLimit, string status)
     {
-        private ArrayList accounts;
-        private int nextid = 1;
-        public Policy() { }
-        //void Started(TimeSpan startDate);
-        //void Ended(TimeSpan endDate);
+        this.id = id;
+        this.propertyLimit = propertyLimit;
+        this.liabilityLimit = liabilityLimit;
+        this.status = status;
 
-        string Status { get; }
-        int Id { get; }
-        decimal PropertyLimit { get; }
-        decimal LiabilityLimit { get; }
     }
 
+    virtual public void Started(TimeSpan startDate)
+    {
+
+    }
+    //void Ended(TimeSpan endDate);
+
 }
+
