@@ -1,13 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 
-namespace Insurance
+
+public class TestPolicy
 {
-    class TestPolicy
+    public static void Main()
     {
-        public static void Main(string[] args)
-        {
-            
-        }
+        Policy policy = new Policy(
+            8976441, 
+            //20170418, 
+            200000.00m, 
+            50000.00m, 
+            "InForceFullyPaid"
+            //04182018
+            );
+        Console.WriteLine(policy.Id);
     }
 }
